@@ -8,8 +8,8 @@ import { testRequest } from '../index'
 //     console.log(res.data)
 //   })
 
-export function getHomeList() {
+export function getDemoList() {
   return testRequest.get({
-    url: '/home/multidata'
+    url: '/demo'
   })
 }

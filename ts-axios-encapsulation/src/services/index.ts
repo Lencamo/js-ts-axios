@@ -6,4 +6,4 @@ export const testRequest = new RenRequest({
   timeout: TIMEOUT
 })
 
-export * from './modules/home'
+export * from './modules/demo'

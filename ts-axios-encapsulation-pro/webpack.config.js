@@ -20,7 +20,7 @@ module.exports = {
   // webpack-dev-server
   devServer: {
     open: true,
-    port: 88,
+    port: 90,
     host: '127.0.0.1'
   },
   // html-webpack-plugin

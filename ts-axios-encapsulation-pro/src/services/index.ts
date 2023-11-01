@@ -17,4 +17,4 @@ export const testRequest = new RenRequest({
   }
 })
 
-export * from './modules/home'
+export * from './modules/demo'

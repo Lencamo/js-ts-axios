@@ -1,20 +1,19 @@
 import { testRequest } from '../index'
-import type { AxiosResponse } from 'axios'
 
 /**
  * response数据类型
  * - 【默认为any】
  */
 
-interface IHomeData {
-  data: any
-  returnCode: string
-  success: boolean
+interface IDemoData {
+  code: number
+  message: string
+  data?: any
 }
 
-export function getHomeList(): Promise<AxiosResponse<IHomeData, any>> {
-  return testRequest.get<IHomeData>({
-    url: '/home/multidata',
+export function getDemoList() {
+  return testRequest.get<IDemoData>({
+    url: '/demo',
 
     // 3、单个请求拦截器 ✨
     interceptors: {

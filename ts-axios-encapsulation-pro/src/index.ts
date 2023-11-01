@@ -1,6 +1,6 @@
-import { getHomeList } from './services/modules/home'
+import { getDemoList } from './services/modules/demo'
 
-getHomeList().then((res) => {
+getDemoList().then((res) => {
   console.log(res.data)
 })
 
