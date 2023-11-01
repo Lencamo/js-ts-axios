@@ -21,16 +21,14 @@ class RenRequest {
     )
 
     // 接入局部拦截功能
-    if (config.interceptors) {
-      this.instance.interceptors.request.use(
-        config.interceptors.requestSuccessFn,
-        config.interceptors.requestFailureFn
-      )
-      this.instance.interceptors.response.use(
-        config.interceptors.responseSuccessFn,
-        config.interceptors.responseFailureFn
-      )
-    }
+    this.instance.interceptors.request.use(
+      config.interceptors?.requestSuccessFn,
+      config.interceptors?.requestFailureFn
+    )
+    this.instance.interceptors.response.use(
+      config.interceptors?.responseSuccessFn,
+      config.interceptors?.responseFailureFn
+    )
   }
 
   // 接入单个请求拦截功能
@@ -48,18 +46,29 @@ class RenRequest {
           }
           resolve(response)
         })
-        .catch((error) => {
+        .catch((error: any) => {
+          if (config.interceptors?.responseFailureFn) {
+            error = config.interceptors.responseFailureFn(error)
+          }
           reject(error)
         })
     })
   }
 
-  get<T = any>(config: RenRequestConfig): Promise<AxiosResponse<T>> {
-    return this.request({ ...config, method: 'get' })
+  get<T = any>(config: RenRequestConfig<T>) {
+    return this.request<T>({ ...config, method: 'GET' })
   }
 
-  post<T = any>(config: RenRequestConfig): Promise<AxiosResponse<T>> {
-    return this.request({ ...config, method: 'post' })
+  post<T = any>(config: RenRequestConfig<T>) {
+    return this.request<T>({ ...config, method: 'POST' })
+  }
+
+  delete<T = any>(config: RenRequestConfig<T>) {
+    return this.request<T>({ ...config, method: 'DELETE' })
+  }
+
+  patch<T = any>(config: RenRequestConfig<T>) {
+    return this.request<T>({ ...config, method: 'PATCH' })
   }
 }
 

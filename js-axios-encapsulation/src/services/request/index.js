@@ -20,11 +20,19 @@ class RenRequest {
   }
 
   get(config) {
-    return this.request({ ...config, method: 'get' })
+    return this.request({ ...config, method: 'GET' })
   }
 
   post(config) {
-    return this.request({ ...config, method: 'post' })
+    return this.request({ ...config, method: 'POST' })
+  }
+
+  delete(config) {
+    return this.request({ ...config, method: 'DELETE' })
+  }
+
+  patch(config) {
+    return this.request({ ...config, method: 'PATCH' })
   }
 }
 
