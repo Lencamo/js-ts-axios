@@ -1,3 +1,5 @@
+import type { InternalAxiosRequestConfig } from 'axios'
+
 import RenRequest from './request/index'
 import { BASE_URL, TIMEOUT } from './request/config'
 
@@ -7,8 +9,9 @@ export const testRequest = new RenRequest({
 
   // 2、局部拦截器✨
   interceptors: {
-    requestSuccessFn: (config) => {
+    requestSuccessFn: (config: InternalAxiosRequestConfig) => {
       console.log('局部请求拦截器')
+      // config.headers.Authorization = 'xxxxx'
       return config
     },
     requestFailureFn: (error) => {
