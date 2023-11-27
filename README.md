@@ -16,7 +16,7 @@
 
 ## 文件说明
 
-### 1、axios 网络请求库
+## 1、axios 网络请求库
 
 > https://axios-http.com/
 
@@ -32,10 +32,10 @@
 
 > 内容：axios 基础封装 + ts 响应结果类型处理 + ts 拦截器精细控制
 
-### 2、ofetch 网络请求库
+## 2、ofetch 网络请求库
 
 > https://github.com/unjs/ofetch
 
 - ts-ofetch-nuxt
 
->
+> 内容：axios 基础封装 + ts 响应结果类型处理 + ts 拦截器精细控制
