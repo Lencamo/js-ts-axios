@@ -38,4 +38,4 @@
 
 - ts-ofetch-nuxt
 
-> 内容：axios 基础封装 + ts 响应结果类型处理 + ts 拦截器精细控制
+> 内容：ofetch 基础封装 + ts 响应结果类型处理 + ts 拦截器精细控制
