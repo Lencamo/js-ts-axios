@@ -47,5 +47,3 @@
 - js-request-uniapp
 
 > 内容：uni-request 基础封装
-
-> 内容：axios 基础封装
