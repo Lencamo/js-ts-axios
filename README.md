@@ -39,3 +39,13 @@
 - ts-ofetch-nuxt
 
 > 内容：ofetch 基础封装 + ts 响应结果类型处理 + ts 拦截器精细控制
+
+## 3、uni-request 网络请求库
+
+> https://zh.uniapp.dcloud.io/api/request/request.html
+
+- js-request-uniapp
+
+> 内容：uni-request 基础封装
+
+> 内容：axios 基础封装
